@@ -1,8 +1,8 @@
 import { useState, useCallback, useEffect, useRef} from 'react'
 
 function App() {
-  const [length, setLength] = useState(6)
-  const [numberAllowed, setNumberAllowed] =useState(false);
+  const [length, setLength] = useState(6);
+  const [numberAllowed, setNumberAllowed] = useState(false);
   const [characterAllowed ,setCharacterAllowed ] = useState(false);
   const [password, setPassword] = useState("");
 
@@ -10,18 +10,18 @@ function App() {
 
   const passwordGenerator = useCallback(()=>{
     let pass="";
-    let str= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let str= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if(numberAllowed) str+="0123456789";
     if(characterAllowed) str+="!~@#$%^&*()--+={}[]:/?><,."
-         
+             
     for (let i = 0; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length +1)
       pass+= str.charAt(char);
     }
     setPassword(pass)
-  
+    
   },[length,numberAllowed,characterAllowed,setPassword] )
-   
+  
   const copypasswordtoclipboard = useCallback(()=>{window.navigator.clipboard.writeText(password)
     passwordRef.current?.select();
   }, [password])
@@ -29,7 +29,7 @@ function App() {
   //copying to clipboard wala function 
   useEffect(()=>{passwordGenerator()} , [length,characterAllowed, numberAllowed, passwordGenerator])
 //running the generator function 
-//useeffect runs once the page is refreshed or if dependencies change
+//use effect runs once the page is refreshed or if dependencies change
   return (
     <div className='w-full max-w-md mx-auto text-white shadow-xl px-4 py-2 my-8 bg-slate-400 rounded-xl'>
       <h1 className='text-center'>PASSWORD GENERATOR</h1>
