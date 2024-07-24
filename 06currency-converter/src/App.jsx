@@ -5,10 +5,25 @@ import './App.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [amount, setAmount] = useState(0)
   const [from , setfrom] = useState("USD")
   const [to , setTo] = useState("INR")
   const [convertedAmount , setConvertedAmount] = useState(0);
+
+  const currencyinfo = useCurrencyinfo(from)
+
+  const options = Object.keys(currencyinfo)
+  
+  const swap = () => {
+    setfrom(to)
+    setTo(from)
+    setConvertedAmount(amount)
+    setAmount(convertedAmount)
+  }
+
+  const convert = () => {
+    setConvertedAmount(amount * currencyinfo[to])
+  }
 
   return (
    <>
