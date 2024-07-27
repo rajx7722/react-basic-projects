@@ -1,0 +1,16 @@
+we dont need app.jsx like this when we use react router 
+what we need now is a routerprovider in main.jsx 
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+    <Header />
+    <Footer />
+    <Home />
+    
+    </>
+  )
+}
+
+=> header,home,footer dont need to be called at every page , we use the layot.jsx for the optimization.
