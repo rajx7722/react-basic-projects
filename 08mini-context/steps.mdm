@@ -1,0 +1,12 @@
+-create usercontext folder and js file
+-user context has to be considered like a global variable and nothing more
+-now we also have to make a provider in jsx format
+-we use usecontext so that we dont have to do propdrilling to get data from 
+one component to another , so we have a state that is accessible by multiple components
+-in usercontextprovider make a const usercontextprovider and a useCallback fn in it 
+-return this in it , the bacche is passed inside the callback fn
+        <UserContext.Provider value={{user ,setUser}}>
+            {bacche}
+        </UserContext.Provider>
+
+-now in either ap.jsx or main.jsx use the UserContextProvider (could also use usercontext.provider vlaues as props)

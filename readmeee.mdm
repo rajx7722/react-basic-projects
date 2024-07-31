@@ -2,7 +2,7 @@
 =>imp documentation for react fibre architecture : https://github.com/acdlite/react-fiber-architecture
 =>learn imp hooks such as useState useref useEffect useCallback
 => <a> tag , anchor tag is used to refresh whole page and we dont do that in react => we use link tag thats why
-=>
+=>almost all complex react projects deal with **context api (state management)** (8th project) or if servers are involved 
 =>
 =>
 =>
