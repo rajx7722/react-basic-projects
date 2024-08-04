@@ -3,7 +3,7 @@
 =>learn imp hooks such as useState useref useEffect useCallback
 => <a> tag , anchor tag is used to refresh whole page and we dont do that in react => we use link tag thats why
 =>almost all complex react projects deal with **context api (state management)** (8th project) or if servers are involved 
-=>
+=>you can have more than 1 use effect in an application
 =>
 =>
 =>
