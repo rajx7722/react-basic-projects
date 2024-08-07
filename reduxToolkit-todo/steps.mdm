@@ -1,0 +1,17 @@
+steps to build store 
+-store.js in app folder made
+-import configurestore
+-export const store = configureStore({})
+now in new file we create createSlice
+-import { createSlice,nanoid } from "@reduxjs/toolkit";
+-slice reducer ka hi ek bada version hai almost
+-reducer kya hai? kuch ni bas functionality hai
+-export const todoSlice = createSlice
+-isi me reducers aayenge'
+-what comes in reducers ? properties and function
+-so differnce between todoSlice and context api ab aata ki usme we didnt define finctions meanwhile in this we define
+them 
+-Remember: we always have access to two props in the fn: state, action.
+-state batayegi ki abhi jo initial state hai usme currently kya values hai
+-action values provide karega jo method ko chiaye hongi kahi se
+
