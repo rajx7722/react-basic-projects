@@ -14,4 +14,39 @@ them
 -Remember: we always have access to two props in the fn: state, action.
 -state batayegi ki abhi jo initial state hai usme currently kya values hai
 -action values provide karega jo method ko chiaye hongi kahi se
+store kahi randomly value leke update nahi karta , usme jo bhi reducers registered hai unse hi value leke update karta hai
+-import todoReducer from '../features/todo/todoSlice' in store
+-main hum do method ke baare me seekhenge, useselecter and usedispatch 
 
+important : dispatch , reducer ko use krte hue , store ke andar value changes karta hai
+
+-values addtodo(state) ke state se milegi ya fir store se which we built for storing?
+-in simple terms, useSelector is a function in React-Redux that allows you to access
+ and use data from the Redux store in your React components. 
+Think of the Redux store as a big container that holds all the information your app needs.
+ useSelector helps you pick the specific piece of information you want from that container so you 
+ can use it in your component.
+
+ -useDispatch is a function in React-Redux that allows you to send actions to the Redux store.
+  Think of the Redux store as a manager that controls the state of your app,
+   and actions are like requests or commands you send to that manager to make changes.
+When you use useDispatch, you're getting a tool that lets you send these requests.
+
+-har app ka ek hi store hota hai , single source of truth! (It can have two but never the standard practice)
+-features are known as slice in here
+
+-redux and react redux are different , redux is core library and react-redux is its implementation for wiring so that 
+redux and react can talk to each other
+-redux toolkit does many things automatically in react redux 
+
+-In React and Redux, state is treated as immutable, meaning once it is set, it should not be changed directly.
+ Instead of modifying the original state object, you create a new one that includes the updates.
+This is important because it helps ensure that changes to state are predictable and traceable.
+React relies on the idea of immutability to efficiently determine what parts of the UI need to be updated.
+ When you mutate state directly, React might not detect that anything has changed,
+ leading to potential bugs or missed updates.
+ 
+ IMPORTANT=Redux Toolkit's createSlice and createReducer functions allow you to write code that looks
+like it’s mutating state directly (e.g., using state.todos.push(...)).
+However, under the hood, it uses a library called Immer that automatically handles immutability for you,
+so the state isn’t actually mutated.
