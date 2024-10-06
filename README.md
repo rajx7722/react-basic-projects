@@ -26,6 +26,11 @@ Here is a list of projects included in this repository:
 2. **Currency Converter**: An application that converts amounts between different currencies using an external API.
 3. **Password Generator**: A tool that generates random passwords based on user-specified criteria such as length and character types.
 4. **counter**: A basic counter app that demonstrates the use of state and event handling in React.
+5. **react-router** Functioning website with header,footer,home and about pages using react router
+6. **mini-context** just basic page to learn the mini context usage
+7. **theme-switcher** light mode dark mode using context api
+8. **todo-using-context and local storage**
+9. **redux-toolkit** another todo to practice the library-redux toolkit
 
 Each project is contained within its own directory, along with specific instructions on how to run and explore it.
 
