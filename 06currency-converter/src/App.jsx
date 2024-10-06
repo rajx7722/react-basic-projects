@@ -10,7 +10,7 @@ function App() {
 
   const currencyinfo = useCurrencyinfo(from)
 
-  const options = Object.keys(currencyinfo)
+  const options = currencyinfo? Object.keys(currencyinfo):[];
   
   const swap = () => {
     setfrom(to)
@@ -38,7 +38,6 @@ function App() {
                         onSubmit={(e) => {
                             e.preventDefault();
                             convert();
-                           
                         }}
                     >
                         <div className="w-full mb-1">
@@ -47,7 +46,7 @@ function App() {
                                 amount={amount}
                                 currencyOption={options}
                                 onCurrencyChange={(currency) => setAmount(amount)}
-                                selectCurrency={to}
+                                selectCurrency={from}
                                 onAmountChange={(amount) => setAmount(amount)}
                                 
                             />
@@ -57,7 +56,7 @@ function App() {
                                 type="button"
                                 className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
                                 onClick={swap}
-                            >
+                            >   
                                 swap
                             </button>
                         </div>
@@ -67,7 +66,7 @@ function App() {
                                 amount={convertedAmount}
                                 currencyOption={options}
                                 onCurrencyChange={(currency)=> setTo(currency)}
-                                selectCurrency={from}
+                                selectCurrency={to}
                                 amountDisable
                             />
                         </div>

@@ -8,12 +8,12 @@ function AddTodo() {
     const dispatch = useDispatch() //simple
 
     const addTodoHandler = (e) => {
-        e.preventDefault()
+        e.preventDefault() //doesnt cause the page to reload
         dispatch(addTodo(input))
         setInput('')
     }
 
-  return (
+  return ( //all things that the component has to display in the brower are returned
     <form onSubmit={addTodoHandler} className="space-x-3 mt-12">
       <input
         type="text"

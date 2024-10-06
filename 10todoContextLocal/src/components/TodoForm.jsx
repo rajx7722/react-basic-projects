@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import {TodoProvider, useTodo} from '../contexts/TodoContext'
-
+import {useTodo} from '../contexts/TodoContext'
 
 function TodoForm() {
     const [todo,setTodo]=useState("")
@@ -9,7 +8,7 @@ function TodoForm() {
     const add= (e)=>{
         e.preventDefault()
 
-        if(!todo) return
+        if(!todo) return;
 
         addTodo({todo:todo, completed : false})
         setTodo("")

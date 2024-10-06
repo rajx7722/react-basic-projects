@@ -4,7 +4,7 @@ const initialState={
     todos: [{
         id:1,
         text:"hello world",
-        completed:false
+        completed:false,
     }]
 }
 
@@ -21,7 +21,6 @@ export const todoSlice = createSlice({
         },
         removeTodo:(state, action)=>{
             state.todos=state.todos.filter((todo)=>todo.id!==action.payload) //will filter out the updated state without the id that was removed
-    
         }
     }
 })
